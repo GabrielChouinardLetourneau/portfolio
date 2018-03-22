@@ -1,0 +1,428 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gabriel Chouinard Letourneau</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7COpen+Sans" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/FortAwesome/Font-Awesome/307323a6a7fe69b7018cb49d2b7e43e1f4b6c92b/css/font-awesome.min.css" />
+    <style type="text/css">
+        /*<!--*/
+        body {
+            font-size: 62.5%;
+            font-family: "Trebuchet MS", sans-serif;
+            background-color: #fff;
+            color: #131313;
+        }
+        .main-wrap {
+            max-width: 960px;
+            margin: 0 auto;
+        }
+        a {
+            color: #131313;
+            text-decoration: none;
+            -webkit-transition: color 0.175s ease 0.05s;
+            -moz-transition: color 0.175s ease 0.05s;
+            transition: color 0.2s ease-in-out 0.09s;
+        }
+        a:visited {
+            color: #000000;
+        }
+        a:hover,
+        a:focus {
+            color: #2f2c55;
+            text-decoration: none;
+        }
+        .header {
+            text-align: center;
+            font-size: 2em;
+            margin: 0 10%;
+        }
+        .section {
+            padding: 1em 1em 0 1em;
+            margin-bottom: 1em;
+        }
+        .section .fa.left {
+            margin-right: 0.25em;
+        }
+        h1 {
+            color: #131313;
+            font-size: 2em;
+            margin: 1em 0 0;
+            text-transform: capitalize;
+        }
+        h2 {
+            font-size: 3.5em;
+            margin: 0.83em 0;
+            text-transform: capitalize;
+        }
+        h3 {
+            color: #4d4d4d;
+            font-size: 1.75em;
+            margin: 1em 0 0;
+        }
+        h4 {
+            color: #666666;
+            font-size: 1.25em;
+            margin: 0 0 1em;
+        }
+        .profile {
+            font-family: "Montserrat";
+            font-size: 1em;
+            margin: 0;
+        }
+        .profile-name {
+            display: none;
+        }
+        .contact-header {
+            font-weight: bolder;
+        }
+        .contact-list li,
+        .contact-list a {
+            color: #2b2b2b;
+        }
+        .contact-list a:hover,
+        .contact-list a:focus {
+            color: #777777;
+        }
+        .label {
+            margin-top: 0;
+            margin-bottom: 0.25em;
+        }
+        .fa {
+            font-size: 2em;
+        }
+        .left {
+            font-size: 1em;
+        }
+        .main {
+            margin: 0 10% 5em;
+        }
+        .skills {
+            margin-bottom: 0.5em;
+        }
+        p {
+            color: #565656;
+            font-family: "Open Sans";
+            font-size: 1.5em;
+        }
+        li {
+            color: #565656;
+            font-family: "Open Sans";
+            font-size: 1.5em;
+        }
+        .contact-list li {
+            display: inline-block;
+        }
+        .contact-list li:first-child:before {
+            content: '';
+        }
+        .list-lines,
+        .list-lines li {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .list-lines li {
+            font-family: "Montserrat";
+            font-size: 1em;
+        }
+        .list-set,
+        .list-set li {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .list-set li {
+            font-family: "Montserrat";
+            display: inline-block;
+        }
+        .list-set li a {
+            display: inline-block;
+        }
+        .list-set li .fa {
+            min-width: 1em;
+            min-height: 1em;
+        }
+        /*Minor adjustment to icons.*/
+        .list-set li .fa-stack-overflow:before {
+            font-size: 0.9em;
+            position: relative;
+            top: -0.05em;
+        }
+        .list-set.keywords {
+            overflow: hidden;
+        }
+        .list-set.keywords li {
+            background-color: #444444;
+            color: #eeeeee;
+            padding: 0.6em 0.85em;
+            font-size: 1.3em;
+            display: inline-block;
+            margin: 1px;
+            float: left;
+        }
+        .profiles-list {
+            margin-top: 0.75em;
+        }
+        blockquote {
+            margin: 2em 1em;
+            padding: 1em;
+            border-left: 0.75em solid #666666;
+            font-family: "Open Sans";
+            font-size: 1.5em;
+        }
+        blockquote .name {
+            font-weight: bold;
+            font-family: "Montserrat";
+            margin-top: 1em;
+        }
+        ::-moz-selection {
+            background: #fff;
+        }
+        ::selection {
+            background: #fff;
+        }
+        @media (max-width: 768px) {
+            body {
+                font-size: 50%;
+            }
+            .header {
+                margin: 0 5%;
+            }
+            .main {
+                margin: 0 5%;
+            }
+        }
+        @media print {
+            body {
+                background: #FFFFFF;
+                color: #171717;
+            }
+            .main-wrap {
+                width: 100%;
+            }
+            .main {
+                margin: 0 0 1em 0;
+            }
+            .section {
+                page-break-inside: avoid;
+            }
+            .main .section:last-child {
+                margin-bottom: 0;
+            }
+            a {
+                color: #555555;
+            }
+            a:visited {
+                color: #555555;
+            }
+            a:hover,
+            a:focus {
+                color: #555555;
+            }
+            h1 {
+                color: #111111;
+                margin-top: 0.5em;
+            }
+            h2 {
+                margin: 0 0 0.25em;
+            }
+            h3 {
+                color: #555555;
+            }
+            h4 {
+                color: #bbbbbb;
+            }
+            .contact-list li,
+            .contact-list a {
+                color: #111111;
+            }
+            p {
+                color: #555555;
+            }
+            li {
+                color: #555555;
+            }
+            .list-set.keywords li {
+                background-color: transparent;
+                color: #555555;
+                border: 1px solid #aaaaaa;
+            }
+            blockquote {
+                border-color: #999999;
+            }
+            .profiles-list {
+                display: table;
+                margin: 0.5em auto 0;
+            }
+            .profiles-list li {
+                display: table-row-group;
+                font-size: 0.75em;
+            }
+            .profiles-list li a {
+                display: table-row;
+            }
+            .profiles-list li a:after {
+                display: table-cell;
+                content: attr(href);
+                text-align: left;
+                padding: 0 0 0 0.5em;
+            }
+            .profiles-list li a .fa {
+                font-size: 1.5em;
+            }
+            .profiles-list li a > * {
+                display: table-cell;
+            }
+            .profiles-list li a .profile-name {
+                display: none;
+            }
+            * {
+                /* Avoid printing the color at the start of the transition (Chrome issue). */
+                -webkit-transition: none !important;
+                -moz-transition: none !important;
+                transition: none !important;
+
+            }
+        }
+
+        /*-->*/
+    </style>
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv-printshiv.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="main-wrap">
+    <header class="header">
+        <h1>Gabriel Chouinard Letourneau</h1>
+        <h3 class="label">Développeur Front-End</h3>
+        <ul id="contact" class="contact-list list-lines">
+            <li class="contact-header">(581)999-8512 | </li>
+            <li class="contact-header"><a href="/cdn-cgi/l/email-protection#bdded5d2c8d4d3dccfd9d1d8c9d2c8cfd3d8dcc8dafddad0dcd4d193ded2d0"><span class="__cf_email__" data-cfemail="76151e19031f181704121a1302190304181317031136111b171f1a5815191b">[email&#160;protected]</span></a></li>
+            <li class="contact-header"><a href="https:&#x2F;&#x2F;timblogues2017gabrielchouinardletourneaublog.wordpress.com&#x2F;"> | https:&#x2F;&#x2F;timblogues2017gabrielchouinardletourneaublog.wordpress.com&#x2F;</a></li>
+        </ul>
+        <ul id="profiles" class="profiles-list list-set">
+            <li><a href="https:&#x2F;&#x2F;twitter.com&#x2F;F4CTOOR" class="profile" title="Twitter"><i class="fa fa-twitter"></i><span class="profile-name">Twitter</span></a></li>
+            <li><a href="https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;gabriel-chouinard-l%C3%A9tourneau-b35847149&#x2F;" class="profile" title="LinkedIn"><i class="fa fa-linkedin"></i><span class="profile-name">LinkedIn</span></a></li>
+            <li><a href="https:&#x2F;&#x2F;www.instagram.com&#x2F;f4ctoor&#x2F;" class="profile" title="Instagram"><i class="fa fa-instagram"></i><span class="profile-name">Instagram</span></a></li>
+        </ul>
+    </header>
+    <main role="main" class="main">
+        <section id="about" class="section">
+            <h2><i class="fa fa-user left"></i>À propos</h2>
+            <p>Toujours à la recherche de défis, mon dépassement est primordial et ma curiosité est sans fin. J'aspire à élargir mes connaissances et mes capacités. La communication, l'ouverture d'esprit, le travail d'équipe et dynamisme font partis de mes valeurs.   </p>
+        </section>
+        <section id="work" class="section">
+            <h2><i class="fa fa-suitcase left"></i>Expériences de travail</h2>
+            <section class="section-sub section-sub-job">
+                <h3>Vendeur, Boulangerie&#x2F;Pâtisserie Péché Mignon</h3>
+                <h4>Janvier 2017 - Aujourd'hui</h4>
+                <p>Boulangerie&#x2F;Pâtisserie française situé sur chemin Saint-Foy.</p>
+                <h4>Résumé</h4>
+                <ul>
+                    <li>Service à la clientèle</li>
+                    <li>Vente</li>
+                    <li>Préparation des aliments</li>
+                </ul>
+            </section>
+            <section class="section-sub section-sub-job">
+                <h3>Caissier&#x2F;baker, La Galette Libanaise</h3>
+                <h4>Août - Décembre 2016</h4>
+                <p></p>
+            </section>
+            <section class="section-sub section-sub-job">
+                <h3>Photographe, AML Jouis Joliette</h3>
+                <h4>Juin - Août 2016</h4>
+                <p></p>
+            </section>
+        </section>
+        <section id="education" class="section">
+            <h2><i class="fa fa-graduation-cap left"></i>Études</h2>
+            <section class="section-sub section-sub-education">
+                <h3>Technologie de l&#39;information - Cégep Sainte-Foy</h3>
+                <h3>Cégep Sainte-Foy</h3>
+                <h4>2017 - 2020 (attendu)</h4>
+                <p>Technique d&#39;intégration multimédia</p>
+                <h4>Capacités acquises</h4>
+                <ul>
+                    <li>CSS</li>
+                    <li>HTML</li>
+                    <li>Javascript</li>
+                    <li>Photoshop</li>
+                    <li>Illustrator</li>
+                    <li>Sketch</li>
+                </ul>
+            </section>
+        </section>
+        <section id="skills" class="section">
+            <h2><i class="fa fa-tasks left"></i>Compétences</h2>
+            <section class="section-sub section-sub-skill">
+                <h3 class="skills">Développement web</h3>
+                <ul class="list-set keywords">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>Javascript</li>
+                </ul>
+            </section>
+            <section class="section-sub section-sub-skill">
+                <h3 class="skills">Design d&#39;interface</h3>
+                <ul class="list-set keywords">
+                    <li>Photoshop</li>
+                    <li>Illustrator</li>
+                    <li>Sketch</li>
+                    <li>Wireframing</li>
+                </ul>
+            </section>
+            <section class="section-sub section-sub-skill">
+                <h3 class="skills">Traitements des médias</h3>
+                <ul class="list-set keywords">
+                    <li>Photoshop</li>
+                    <li>Lightroom</li>
+                    <li>Audition</li>
+                </ul>
+            </section>
+        </section>
+        <section id="interests" class="section">
+            <h2><i class="fa fa-star left"></i>Intérêts</h2>
+            <section class="section-sub section-sub-interest">
+                <h3 class="skills">Photographie</h3>
+                <ul class="list-set keywords">
+                    <li>Canon</li>
+                    <li>Portrait</li>
+                    <li>Paysage</li>
+                    <li>Monochrome</li>
+                </ul>
+            </section>
+            <section class="section-sub section-sub-interest">
+                <h3 class="skills">Audio</h3>
+                <ul class="list-set keywords">
+                    <li>.FLAC</li>
+                    <li>Hi-Fi</li>
+                </ul>
+            </section>
+        </section>
+        <section id="languages" class="section">
+            <h2><i class="fa fa-quote-left left"></i>Langues</h2>
+            <section class="section-sub section-sub-language">
+                <h3>Français</h3>
+                <p>Langue maternelle</p>
+            </section>
+            <section class="section-sub section-sub-language">
+                <h3>Anglais</h3>
+                <p>Avancé</p>
+            </section>
+            <section class="section-sub section-sub-language">
+                <h3>Allemand</h3>
+                <p>Débutant</p>
+            </section>
+        </section>
+    </main>
+</div>
+<script data-cfasync="false" src="/cdn-cgi/scripts/d07b1474/cloudflare-static/email-decode.min.js"></script></body>
+</html>
