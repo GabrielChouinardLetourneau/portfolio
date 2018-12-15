@@ -1,0 +1,197 @@
+/**
+ * @author Samuel Loranger
+*/
+
+.contenuTable{
+  width: span(6 of 12);
+  height: 135px;
+  margin-left: span(1 of 12);
+  display: flex;
+  justify-content: flex-end;
+
+  @media(max-width: $bureau){
+    display: none;
+  }
+
+  &__profil{
+    width: span(3 of 6);
+    height: 50%;
+    font-family: $fontBold;
+    font-size: 2.4rem;
+    margin-right: gutter(5);
+    padding-top: 50px;
+    padding-left: 2%;
+  // Ces styles s'appliquent seulement si JS est activé
+  .js & {
+    #profilContenu {
+      display: block;
+      position: relative;
+      height: 90px;
+      transition: 0.15s all ease-in-out;
+      padding: 10px 5px;
+      background-color: $gris; 
+      outline: solid 2px $bleu;
+      a{
+        opacity: 1;
+      } 
+    }     
+    &--hidden {
+      #profilContenu { 
+        color: none;
+        height: 0;
+        padding: 0;
+        outline: 0;
+        a{ 
+          opacity: 0;
+        }
+      }  
+    }    
+  }
+    &Link{
+      margin-left: 5%;
+      &:hover{
+        border-bottom: 5px $jauneAccent solid;
+        transition: .2s all ease-in-out;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__recherche{
+    padding-top: 50px;
+    width: span(3 of 6);
+    height: 50%;
+
+    input{
+      width: 100%;
+      height: 32px;
+      border-radius: 8px;
+      border: none;
+      padding-left: 5px;
+      font-size: 15px;
+      background-image: url("../images/icones/028-search.png");
+      background-size: 25px 25px;
+      background-position-x: span(3 of 3) - 3%;
+      background-position-y: 35%;
+      background-repeat: no-repeat;
+      background-color: white;
+    }
+  }
+
+}
+
+.header{
+  background-color: $bleu;
+  color: white;
+  height: 45px;
+  padding-top: 3px;
+  @include clearfix();
+  @include ombrePortee();
+  @media (min-width: $bureau) {
+    height: 150px;
+    .conteneur{
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+
+  &__logo{
+    width: span(1 of 4);
+    display: block;
+
+    @media(min-width: $bureau){
+      width: span(5 of 12);
+      margin-top: 5%;
+    }
+
+    @media(min-width: 700px){
+      margin-top: 0%;
+    }
+
+    img{
+      margin-left: 15%;
+      @media(min-width: $bureau){
+        width: 100%;
+        margin-left: 0%;
+      }
+   }
+  }
+
+  &__liste{
+    list-style-type: none;
+    background-color: $bleu;
+    display: block;
+    width: 100%;
+    top: 28px;
+    position: absolute;
+    left: 0;
+    transition-duration: 0.4s;
+    padding-left: 0;
+    height: 100%;
+    overflow: hidden;
+    z-index: 2;
+
+    &Container{
+      background-color: $gris;
+      position: relative;
+      width: 85%;
+      margin: 0 auto;
+
+      li{
+        display: block;
+      }
+    }
+
+    &--ferme{
+      //left: 100%;
+      height: 0;
+    }
+
+    @media(min-width: $bureau){
+      display:none;
+    }
+
+    &Item {
+      margin: 0 auto;
+      padding-left: 10px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      @include fontSize(18px);
+
+      &--active {
+        border-left: 6px $jauneAccent solid;
+        padding-left: 4px;
+      }
+
+      &:nth-child(1) a, &:nth-child(2) a, &:nth-child(3) a {
+        font-family: $fontBold;
+
+        &:before {
+          padding-right: 8px;
+        }
+      }
+
+      &:nth-child(1) {
+        margin-top: 5px;
+      }
+
+      &:nth-child(3) {
+        padding-bottom: 10px;
+        border-bottom: 1px solid white;
+      }
+
+      &:last-child {
+        height: 10em;
+      }
+
+      a {
+        transition: .2s all ease-in-out;
+        &:hover, &:active {
+          border-bottom: 5px $jauneAccent solid;
+        }
+      }
+    }
+  }
+}

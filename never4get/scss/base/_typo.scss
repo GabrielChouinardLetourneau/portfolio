@@ -1,0 +1,48 @@
+/**
+ * @author Gabriel Chouinard Létourneau <chouinardletourneaug@gmail.com>
+*/
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  @include fontSize(16px);
+  font-family: $fontRegular;
+  line-height: 1.375;
+  /* facteur multiplicateur de la taille de la police 1.375x16=22 */
+  @media (min-width:$bureau) {
+    line-height: 1.5;
+  }
+}
+
+h1, .h1, 
+h2, .h2,
+h3, .h3 {
+  font-family: $fontBold;
+}
+
+h1, .h1 {
+  @include fontSize(24px);
+  @media (min-width: $bureau) {
+    @include fontSize(32px);     
+  }
+}
+
+h2, .h2{
+  @include fontSize(20px);
+  @media (min-width: $bureau) {
+    @include fontSize(24px);     
+  }
+}
+
+h3, .h3 {
+  @include fontSize(18px);
+  @media (min-width: $bureau) {
+    @include fontSize(20px);     
+  }
+}
+
+button{
+  @include fontSize(16px);
+}

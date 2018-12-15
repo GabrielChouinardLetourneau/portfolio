@@ -1,0 +1,43 @@
+/**
+ * @author Gabriel Chouinard Létourneau <chouinardletourneaug@gmail.com>
+*/
+
+/** Polices de caractères **/
+/** Polices de caractères **/
+@font-face {
+    font-family: 'WorkSans--Regular';
+    src: url('../fonts/Work_Sans/WorkSans-Regular.ttf'); 
+}
+@font-face {
+    font-family: 'WorkSans--SemiBold';
+    src: url('../fonts/Work_Sans/WorkSans-SemiBold.ttf');
+}
+@font-face {
+    font-family: 'WorkSans--Bold';  
+    src: url('../fonts/Work_Sans/WorkSans-Bold.ttf');
+} 
+$fontRegular: 'WorkSans--Regular', sans-serif;
+$fontSemiBold: 'WorkSans--SemiBold', sans-serif;
+$fontBold: 'WorkSans--Bold', sans-serif;
+
+
+/** Palette de couleurs **/
+
+// Utiliser http://chir.ag/projects/name-that-color
+// pour obtenir des noms uniques et mémorisables
+// Permettez-vous d'utiliser un nom de variable plus explicite
+// si la suggestion de name-that-color est trop étrange
+
+/* Couleurs de base */
+$bleu: #0047AB;
+$gris: #575757;
+$jauneAccent: #F7C94B;
+
+/* Autres couleurs */
+$bleuHover: transparentize($bleu, 0.25);
+$bleuActive: transparentize($bleu, 0.15);
+$jauneHover: transparentize($jauneAccent, 0.25);
+$jauneActive: transparentize($jauneAccent, 0.15);
+
+/** Points de rupture **/
+$bureau : 600px;
