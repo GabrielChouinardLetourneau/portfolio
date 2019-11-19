@@ -1,0 +1,52 @@
+/**
+ * @author Élody Levasseur-Côté <elodylevasseurcote@hotmail.com>
+ * @team les_stitchs
+ * @todo ADAPTER ce fichier selon concept
+ * ------------------
+ * TABLE DES MATIÈRES
+ * ------------------
+ * Polices de caractères
+ * Palette de couleurs
+ * Points de rupture
+ **/
+
+/** Polices de caractères **/
+@import url("https://use.typekit.net/cer8nhb.css");
+
+$policeTitres: linotype-didot, serif;
+$policeCorps: Helvetica, sans-serif;
+
+/** Palette de couleurs **/
+// Au besoin utiliser http://chir.ag/projects/name-that-color pour nommer les couleurs
+
+$beige: #E7CFB4;
+$beigePale: #FAF3EB;
+$orange: #DA6D42;
+$grisPale: #F8F8F8;
+$grisMoyen: #EBEBEB;
+$grisFonce: #DBDBDB;
+$grisTresFonce: #6F6E70;
+$rougeOrange: #84240C;
+$rougeVin: #530000;
+
+$dominante: $orange;
+$secondaire: $rougeOrange;
+
+/* Couleur intéractivité */
+$orangePale: #F39F82;
+$gris: #C0C0C0;
+
+/* Couleur d'erreur */
+$rouge: #E30000;
+
+
+/** Points de rupture **/
+$tablettePortrait : 840px;
+/* tablet, landscape iPad, lo-res laptops ands desktops */
+$desktop : 601px;
+$tablette: 768px;
+/* hi-res laptops and desktops */
+
+/* Variables pour les animations */
+$duration: .20;
+$easing: ease-in-out;

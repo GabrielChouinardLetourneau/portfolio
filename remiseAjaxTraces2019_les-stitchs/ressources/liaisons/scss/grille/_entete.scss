@@ -1,0 +1,340 @@
+/*
+  @author : Marie-Li Durand
+ */
+
+.entete {
+  background-color: $grisFonce;
+  padding: 10px;
+  &__cadre {
+    position: relative;
+    border: 2px solid #ffffff;
+    padding: 15px;
+  }
+  &__contenu {
+    display: flex;
+    flex-direction: column;
+  }
+  &__logo {
+    width: 80%;
+    height: auto;
+    //width: 140px;
+    //height: 50px;
+    @media(min-width: $tablette) {
+      width: 100%;
+      height: auto;
+    }
+  }
+  /* Menu principal */
+  &__menuPrincipal {
+    padding-bottom: 5px;
+    @media(min-width: $tablette) {
+      display: block;
+      margin-top: 40px;
+      padding-bottom: 0;
+      order: 3;
+    }
+    &Liste {
+      display: flex;
+      flex-direction: column;
+      padding-left: 0;
+      border-bottom: 1px solid #979797;
+      width: 100%;
+      margin-bottom: 0;
+      @media(min-width: $tablette) {
+        flex-direction: row;
+        order: 2;
+        justify-content: space-between;
+        margin-top: 50px;
+        padding-left: 0;
+        border-bottom: none;
+      }
+    }
+    &Item {
+      list-style: none;
+      padding-bottom: 20px;
+      position: relative;
+      @media(min-width: $tablette) {
+        padding-bottom: 0;
+      }
+      &:after {
+        position: absolute;
+        content: "";
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 0;
+        background-color: #530000;
+        transition: all 0.3s ease-in-out;
+      }
+      &:hover {
+        &:after {
+          height: 3px;
+          width: 100%;
+          left: calc(0%);
+        }
+      }
+    }
+    &Lien {
+      text-transform: uppercase;
+      font-family: $policeTitres;
+      font-weight: 900;
+      color: #000000;
+      @include fontSize(15px);
+      @media(min-width: 1000px)  {
+        @include fontSize(18px);
+      }
+    }
+    &Lien:hover {
+      background-color: transparent;
+      color: #000000;
+    }
+  }
+  /* Menu secondaire */
+  &__menuSecondaire {
+    display: flex;
+    flex-direction: column;
+    padding-left:0;
+    @media(min-width:$tablette) {
+      order:1;
+      width: 100%;
+      justify-content: flex-end;
+      flex-direction: row;
+      //margin-bottom: 40px;
+    }
+    &Item {
+      list-style: none;
+      position: relative;
+      @media(min-width: $tablette) {
+        margin-left: 30px;
+      }
+      &:after {
+        position: absolute;
+        content: "";
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 0;
+        background-color: #530000;
+        transition: all 0.3s ease-in-out;
+      }
+      &:hover {
+        &:after {
+          height: 3px;
+          width: 100%;
+          left: calc(0%);
+        }
+      }
+    }
+    &Lien {
+      color: #000000;
+    }
+    &Lien:hover {
+      background-color: transparent;
+      color: #000000;
+    }
+  }
+  &__deuxiemeRangee.mobile {
+    display: flex;
+    @media(min-width: $tablette) {
+      display: none;
+    }
+  }
+  &__deuxiemeRangee.table {
+    display: none;
+    @media(min-width: $tablette) {
+      display: flex;
+    }
+  }
+  &__deuxiemeRangee {
+    flex-direction: row;
+    flex-wrap: wrap;
+    @media(min-width: $tablette) {
+      order: 2;
+     // margin-top: 60px;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &LogoPanier {
+      display: flex;
+      justify-content: space-between;
+      width: span(3 of 4);
+    }
+    &Logo {
+      background-image: url('../../../ressources/liaisons/images/logo.svg');
+      width: 170px;
+      height: 90px;
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      &:hover {
+        transition: background-image .2s linear;
+        background-image: url('../../../ressources/liaisons/images/logo_hover.svg');
+        background-color: transparent;
+      }
+      @media(min-width: $tablette) {
+        width: span(4 of 12);
+        margin-right: span(3 of 12) + gutter(12)*2;
+      }
+    }
+    &Panier {
+      position: relative;
+     // margin: 11px 100px 0 auto;
+      height: fit-content;
+      @media(min-width: $tablette) {
+        order: 3;
+        width: span(1 of 12);
+        text-align: right;
+        margin:0;
+      }
+      &NbArticles {
+        position: absolute;
+        top: 0;
+        right: -5px;
+        color: #fff;
+        width: 25px;
+        height: 25px;
+        z-index: 100;
+        line-height: 25px;
+        text-align: center;
+        @include fontSize(14px);
+      }
+      &--plein {
+        &:after {
+          content:"";
+          width: 25px;
+          height: 25px;
+          border-radius: 50%;
+          background-color: $rougeVin;
+          position: absolute;
+          top: 0;
+          right: -5px;
+        }
+      }
+    }
+    &Panier:hover {
+      background-color: transparent;
+      transform: scale(1.2);
+      transition: transform 0.3s ease-in-out;
+    }
+  }
+  &__formulaireRecherche {
+    width: 100%;
+    order: 3;
+    @media(min-width: $tablette) {
+       width: span(4 of 12);
+      margin-right: gutter(12);
+    }
+  }
+  &__recherche {
+    order: 3;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 20px;
+    @media(min-width: $tablette) {
+      order: 2;
+      margin-top: 0;
+      margin-left: 0;
+    }
+    &Saisie {
+      margin-top: 0;
+      width: 100%;
+      margin-bottom: 0;
+      &Champ {
+        @include input;
+      }
+    }
+    &CriteresRecherche{
+      margin-top:0;
+      margin-bottom: 0;
+
+      &Liste {
+        position: relative;
+        width: 80px;
+        overflow: hidden;
+        border: 0;
+        @include select;
+      }
+      &Liste select {
+        border: none;
+      }
+    }
+    &Bouton {
+      height: 42px;
+      margin:0;
+      padding: 10px;
+    }
+  }
+}
+.iconeRechercher {
+  width: 24px;
+  height: 24px;
+}
+
+.iconePanier {
+  width: 40px;
+  height: 40px;
+}
+
+.iconeClient {
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  vertical-align: middle;
+}
+
+/* Menu */
+.menu__btnMenu {
+  position: absolute;
+  top: 28px;
+  right: 15px;
+  width: 45px;
+  height: 40px;
+  background-image: url("../../../ressources/liaisons/images/icons/menuClose.svg");
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: 0;
+  @media(min-width: $tablette) {
+    display: none;
+  }
+}
+
+.entete--ferme .menu__btnMenu {
+  background-image: url("../../../ressources/liaisons/images/icons/menu.svg");
+}
+
+.entete .menu--ferme .entete__menuPrincipalListe {
+  display: none;
+  @media(min-width: $tablette) {
+    display: flex;
+  }
+}
+
+.js .entete .menu--ferme .entete__deuxiemeRangeeLogo {
+  display: flex;
+}
+
+.js .entete .menu--ferme ~ .entete__menuSecondaire {
+  display: none;
+  @media(min-width: $tablette) {
+    display: flex;
+  }
+}
+
+.js .entete .entete__menuPrincipal {
+  margin-top: 15px;
+}
+
+.js .entete .menu--ferme.entete__menuPrincipal {
+  margin-top: 0;
+}
+
+//.entete .entete__menuPrincipalListe {
+//  display: inline-block;
+//}
+ .entete .entete__recherche {
+  display: flex;
+}
+
+
+.js .entete__recherche.cache {
+  display: none;
+}

@@ -1,0 +1,69 @@
+/**
+ * @author Élody Levasseur-Côté <elodylevasseurcote@hotmail.com>
+ * @team les_stitchs
+ * @todo Compléter selon l'énoncé
+*/
+@include border-box-sizing;
+
+@media(max-width:(($desktop)-1px)){
+  $susy: (
+          'columns': susy-repeat(4),
+          'gutters': 0.25,
+          'spread': 'narrow',
+          'container-spread': 'narrow',
+  );
+  .conteneur {
+    //  background: susy-svg-grid($susy) no-repeat scroll;
+  }
+}
+@media(min-width:$desktop){
+  $susy: (
+          'columns': susy-repeat(12),
+          'gutters': 0.25,
+          'spread': 'narrow',
+          'container-spread': 'narrow'
+  );
+
+  .conteneur {
+    //  background: susy-svg-grid($susy) no-repeat scroll;
+ }
+}
+
+.conteneur {
+
+  max-width: 1000px;
+  margin:0 auto;
+}
+img{
+  max-width: 100%;
+}
+
+//medium+ screen sizes
+@media (min-width: $desktop) {
+  .desktop-only {
+      display:block;
+  }
+  .mobile-only {
+    display:none;
+}
+}
+
+//small screen sizes
+@media (max-width: ($desktop - 1px)) {
+  .mobile-only {
+      display:block;
+  }
+
+  .desktop-only {
+      display:none;
+  }
+}
+
+.elementErreur {
+  border-color: $rouge;
+  border-width: 2px;
+}
+
+.elementIconeErreur {
+  margin-right: 6px;
+}
