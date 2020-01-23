@@ -152,6 +152,9 @@ li {
 		margin: 1px;
 		float: left;
 }
+.section-sub-education li {
+		font-weight: bold;
+}
 .profiles-list {
 		margin-top: 0.75em;
 }
