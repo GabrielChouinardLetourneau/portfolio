@@ -153,6 +153,7 @@ li {
 		float: left;
 }
 .section-sub-education li {
+		font-family: "Montserrat";
 		font-weight: bold;
 }
 .profiles-list {
