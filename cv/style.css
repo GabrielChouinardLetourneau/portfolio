@@ -144,13 +144,17 @@ li {
 		overflow: hidden;
 }
 .list-set.keywords li {
-		background-color: #444444;
-		color: #eeeeee;
+		background-color: #0F4C81;
+		color: #fff;
 		padding: 0.6em 0.85em;
 		font-size: 1.3em;
 		display: inline-block;
 		margin: 1px;
 		float: left;
+}
+.section-sub-education li {
+		font-family: "Montserrat";
+		font-weight: bold;
 }
 .profiles-list {
 		margin-top: 0.75em;
