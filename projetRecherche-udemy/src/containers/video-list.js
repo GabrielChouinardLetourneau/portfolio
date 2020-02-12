@@ -1,20 +1,21 @@
-import React from 'react'
-import VideoListItem from '../components/video-list-item'
+import React from 'react';
+import VideoListItem from '../components/video-list-item';
 
-const VideoList = () => {
-        const movies = ['movie1', 'movie2', 'movie3', 'movie4', 'movie5'];
+const VideoList = (props) => {
+    const { movieList } = props;
     return (
         <div>
             <ul>
-                {
-                    movies.map(movie => {
-                        return <VideoListItem movie={movie} key={movie} />
-                    })
-                }
+                {movieList.map((movie) => {
+                    return <VideoListItem key={movie.id} movie={movie} callback={receiveCallback} />;
+                })}
             </ul>
         </div>
     );
 
-}
+    function receiveCallback(movie) {
+        props.callback(movie);
+    }
+};
 
 export default VideoList;
