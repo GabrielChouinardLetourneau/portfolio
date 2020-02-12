@@ -1,0 +1,18 @@
+.search_bar {
+    margin: 30px 0;
+}
+
+li {
+    transition: .2s all ease-in-out;
+}
+
+li:hover {
+    color: #fff;
+    background-color: rgb(14, 18, 14);
+    cursor: pointer;
+}
+
+.title_list_item {
+    padding-top: 40px;
+    text-align: center;
+}
