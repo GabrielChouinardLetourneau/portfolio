@@ -6,7 +6,7 @@ class SearchBar extends Component {
         this.state = {
             searchText: '',
             placeholder: 'Tapez votre film...',
-            intervalBeforeRequest: 2200,
+            intervalBeforeRequest: 1500,
             lockRequest: false
         };
     }

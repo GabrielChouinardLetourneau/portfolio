@@ -87,7 +87,9 @@ export default class App extends Component {
                                     currentMovie: response.data.results[0]
                                 },
                                 () => {
-                                    this.applyVideoToCurrentMovie();
+                                    if (this.state.currentMovie.videos) {
+                                        this.applyVideoToCurrentMovie();
+                                    }
                                     this.setRecommendation();
                                 }
                             );

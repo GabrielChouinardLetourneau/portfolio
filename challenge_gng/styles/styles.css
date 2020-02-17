@@ -1,0 +1,53 @@
+/**
+ * @author Gabriel Chouinard Létourneau
+ * @todo Styles minimalistes du challenge
+ * Utilisation de la nomenclature BEM sans SASS pour diminuer temps et poids
+*/
+
+.todo__title {
+    text-align: center;
+}
+
+.todo__container {
+    display: flex;
+    flex-direction: column;
+}
+
+.todo__list {
+    margin-top: 15px;
+}
+
+.todo__listItem {
+    margin: 15px 0;
+    background-color: #bbb7b7;
+    box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.4);
+}
+
+.todo__listItemLabelDate,
+.todo__listItemLabelTask {
+    font-weight: bold;
+}
+
+.todo__listItemLabelTask {
+    margin-left: 20px;
+}
+
+.todo__listItemBtn {
+    background: unset;
+    background-color: #353d78;
+    padding: 10px;
+    margin-left: 50px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+.todo__listItemBtn--delete {
+    background: unset;
+    background-color: #961a1a;
+    padding: 10px;
+    margin-left: 50px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
