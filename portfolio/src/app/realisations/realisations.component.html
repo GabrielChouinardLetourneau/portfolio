@@ -1,0 +1,7 @@
+<h2>Réalisations passées</h2>
+<ng-container *ngFor="let realisationCard of realisations">
+  <div>
+    <img [src]=realisationCard.ImagePath alt="">
+    <h3>{{ realisationCard.Title }}</h3>
+  </div>
+</ng-container>
