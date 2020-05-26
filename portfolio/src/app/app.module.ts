@@ -1,16 +1,19 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { AngularDocsComponent } from './angular-docs/angular-docs.component';
-import { RealisationIndexComponent } from './realisation-index/realisation-index.component';
-import { NotFoundComponent } from './not-found/not-found.component';
+import { MatTabsModule } from '@angular/material/tabs';
+
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { MoreAboutMeComponent } from './more-about-me/more-about-me.component';
 import { RealisationsComponent } from './realisations/realisations.component';
 import { IntroductionComponent } from './introduction/introduction.component';
+import { SkillsTabsComponent } from './skills-tabs/skills-tabs.component';
+import { AppRoutingModule } from './app.routes';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -21,12 +24,19 @@ import { IntroductionComponent } from './introduction/introduction.component';
     FooterComponent,
     IntroductionComponent,
     RealisationsComponent,
-    MoreAboutMeComponent
+    MoreAboutMeComponent,
+    SkillsTabsComponent
   ],
   imports: [
-    BrowserModule
+    AppRoutingModule,
+    BrowserModule,
+    BrowserAnimationsModule,
+    MatTabsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA
+  ]
 })
 export class AppModule { }
