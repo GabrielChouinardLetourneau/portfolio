@@ -24,6 +24,7 @@
     "@angular/router": "~9.1.6",
     "@angular-devkit/build-angular": "~0.901.5",
     "node-sass": "^4.14.1",
+    "typescript": "~3.8.3",
     "rxjs": "~6.5.4",
     "susy": "^3.0.5",
     "tslib": "^1.10.0",
