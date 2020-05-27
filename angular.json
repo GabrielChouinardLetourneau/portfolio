@@ -125,12 +125,7 @@
           }
         },
         "deploy": {
-          "builder": "angular-cli-ghpages:deploy",
-          "options": {
-            "baseHref": "https://gabrielchouinardletourneau.github.io/portfolio/",
-            "name": "GabrielChouinardLetourneau",
-            "email": "chouinardletourneaug@gmail.com"
-          }
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
