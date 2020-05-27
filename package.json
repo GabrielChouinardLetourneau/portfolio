@@ -9,12 +9,12 @@
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
-  "private": false,
+  "private": true,
   "dependencies": {
     "@angular/animations": "~9.1.6",
     "@angular/cdk": "^9.2.4",
     "@angular/common": "~9.1.6",
-    "@angular/cli": "7.3.9",
+    "@angular/cli": "~9.1.5",
     "@angular/compiler": "~9.1.6",
     "@angular/core": "~9.1.6",
     "@angular/forms": "~9.1.6",
