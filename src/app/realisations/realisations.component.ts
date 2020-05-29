@@ -26,7 +26,8 @@ export class RealisationsComponent implements OnInit, OnDestroy {
   }
 
   navigateTo(realisation) {
-    this.router.navigateByUrl('/realisation', { state: { realisation } });
+    // this.router.navigateByUrl('/realisation', { state: { realisation } });
+    this.router.navigate(['/realisation'], { state: { realisation } });
   }
 
   ngOnDestroy() {

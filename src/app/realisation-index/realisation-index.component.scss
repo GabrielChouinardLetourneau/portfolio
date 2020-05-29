@@ -1,6 +1,41 @@
-.appContainer {
-  min-height: 100vh; /* will cover the 100% of viewport */
-  overflow: hidden;
-  display: block;
-  position: relative;
+.realisationsIndex {
+  padding-bottom: 500px;
+
+  &__breadcrums {
+    &Lien {
+      color: #4F6395;
+      transition: .3s all linear;
+      cursor: pointer;
+      &:hover {
+        transition: .3s all linear;
+        font-size: 20px;
+      }
+    }
+  }
+
+  &__container {
+    @media screen and (min-width: 601px) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__img {
+    @media screen and (min-width: 601px) {
+      width: span(4 of 12);
+    }
+  }
+
+  &__content {
+    @media screen and (min-width: 601px) {
+      width: span(7 of 12);
+      margin-left: span(1 of 12)+gutter(12);
+    }
+
+    &Text {
+      @media screen and (min-width: 601px) {
+        margin-left: span(1 of 7);
+      }
+    }
+  }
 }

@@ -4,7 +4,9 @@
       <mat-tab [label]="title">
         <ng-container *ngFor="let skill of skillsContent[title]">
           <a [href]=skill.UrlPathDocs class="skillsTabs__hover">
-            <img [src]=skill.ImagePath [alt]=skill.DescriptionAlt class="skillsTabs__logos"/>
+            <img [ngClass]="{
+              'skillsTabs__logos--larger': skill.Tech === 'laravel' || skill.Tech === 'phpMyAdmin'
+            }" [src]=skill.ImagePath [alt]=skill.DescriptionAlt class="skillsTabs__logos" />
           </a>
         </ng-container>
       </mat-tab>

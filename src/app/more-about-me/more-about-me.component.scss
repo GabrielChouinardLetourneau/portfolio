@@ -1,7 +1,7 @@
 .moreAbout {
   margin-bottom: 50px;
 
-  margin-bottom: 400px;
+  margin-bottom: 510px;
 
   &__titre {
     width: 100%;
@@ -20,9 +20,25 @@
 
   &__presentation {
     width: span(4);
-
     @media screen and (min-width: 601px) {
       width: span(4 of 12);
+    }
+    &Skills {
+      &Titre {
+        margin: 20px 0 0 0;
+
+        &Container {
+          text-align: center;
+        }
+        &Line {
+          display: inline-block;
+          width: 80%;
+          height: 5px;
+          background-color: #6C87CC;
+          border-radius: 5px;
+          margin: 10px 0 20px;
+        }
+      }
     }
   }
 
@@ -42,6 +58,13 @@
         width: span(6 of 8);
         margin-right: span(2 of 8) + gutter(8);
       }
+
+      &Quote {
+        font-family: 'WorkMedItalic';
+        &Author {
+          display: block;
+        }
+      }
     }
 
     &Lists {
@@ -60,7 +83,7 @@
         img {
           width: 30px;
           vertical-align: middle;
-          margin-left: 5px;
+          margin-left:  5px;
         }
       }
     }

@@ -1,15 +1,19 @@
-<main class="conteneur realisationIndex">
-  <img [src]=realisationContent.ImagePath [alt]="realisationContent.Title">
+<main class="conteneur realisationsIndex">
+  <div class="realisationsIndex__breadcrums">
+    <p><span class="realisationsIndex__breadcrumsLien" (click)="returnHome()">Accueil</span> -
+      {{ realisationContent.Title }}</p>
+  </div>
+  <div class="realisationsIndex__container">
+    <div class="realisationsIndex__img">
+      <img [src]=realisationContent.ImagePath [alt]="realisationContent.Title">
+    </div>
+    <div class="realisationsIndex__content">
+      <h2>{{ realisationContent.Title }}</h2>
+      <p>
+        {{ realisationContent.SchoolProject ? 'Projet scolaire' : 'Stage chez Orage Communication' }}
+      </p>
 
-  <h2>{{ realisationContent.Title }}</h2>
-  <ng-template *ngIf="realisationContent.SchoolProject; else notSchool">
-    Show this only if "show" is true
-  </ng-template>
-
-  <ng-template #notSchool>
-    <p>
-      Show this only if "show" is not true
-    </p>
-  </ng-template>
-  <p>{{ realisationContent.Text }}</p>
+      <p class="realisationsIndex__contentText">{{ realisationContent.Text }}</p>
+    </div>
+  </div>
 </main>

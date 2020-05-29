@@ -1,4 +1,30 @@
 .header {
+  // padding: 50px;
+
+  &__titresContainer{
+    position: relative;
+  }
+
+  &__titre {
+    font-size: 35px;
+    background: url('/assets/bgTitle.png') center center;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+
+    &Mask {
+      font-size: 35px;
+      font-family: 'FiraMed';
+      margin: 0;
+      position: absolute;
+      top: 0;
+      color: #4F6395;
+      z-index: -1;
+    }
+    &Poste {
+      font-size: 25px;
+    }
+  }
 
   &__links {
     &:first-of-type {

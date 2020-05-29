@@ -12,6 +12,9 @@
     transition: .3s all ease-in-out;
     width: 68px;
     margin: 30px;
+    &--larger {
+      width: 95px;
+    }
   }
 
   mat-tab-body {

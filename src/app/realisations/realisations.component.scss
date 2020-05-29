@@ -45,6 +45,7 @@
       transition: .5s all ease-in-out;
       overflow: hidden;
       &Titre {
+        font-size: 20px;
         transition: .3s all ease-in-out;
         opacity: 0;
         display: flex;
@@ -54,7 +55,12 @@
 
     &--last {
       background-color: #4F6395;
-
+      width: span(4 of 4);
+      padding: 25% 15%;
+      @media screen and (min-width: 601px) {
+        width: span(4 of 12);
+        padding: unset;
+      }
       &Titre {
         font-family: "FiraMed";
         height: 100%;

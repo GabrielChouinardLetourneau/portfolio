@@ -43,8 +43,13 @@ ul {
   width: 7.5px;
   height: 2px;
   vertical-align: middle;
-  margin-right: 2px;
+  margin-right: 10px;
   background-color: #000;
+}
+
+.appContainer {
+  overflow: hidden;
+  position: relative;
 }
 
 img {
@@ -53,37 +58,37 @@ img {
 
 @font-face {
   font-family: "FiraMed";
-  src: url("/../../assets/fontes/FiraCode-Medium.ttf") format("truetype");
+  src: url("./assets/fontes/FiraCode-Medium.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "WorkReg";
-  src: url("/../../assets/fontes/WorkSans-Regular.ttf") format("truetype");
+  src: url("./assets/fontes/WorkSans-Regular.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "WorkItalic";
-  src: url("/../../assets/fontes/WorkSand-Italic.ttf") format("truetype");
+  src: url("./assets/fontes/WorkSans-Italic.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "WorkMed";
-  src: url("/../../assets/fontes/WorkSans-Medium.ttf") format("truetype");
+  src: url("./assets/fontes/WorkSans-Medium.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "WorkMedItalic";
-  src: url("/../../assets/fontes/WorkSand-MediumItalic.ttf") format("truetype");
+  src: url("./assets/fontes/WorkSans-MediumItalic.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "WorkSemiB";
-  src: url("/../../assets/fontes/WorkSand-SemiBold.ttf") format("truetype");
+  src: url("./assets/fontes/WorkSans-SemiBold.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "WorkSemiBItalic";
-  src: url("/../../assets/fontes/WorkSand-SemiBoldItalic.ttf") format("truetype");
+  src: url("./assets/fontes/WorkSans-SemiBoldItalic.ttf") format("truetype");
 }
 
 body {
@@ -93,4 +98,16 @@ body {
 
 h1, h2, h3 {
   font-family: "FiraMed";
+}
+
+h1 {
+  font-size: 35px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 25px;
 }

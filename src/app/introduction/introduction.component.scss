@@ -11,6 +11,9 @@
       width: span(6 of 12);
       margin-left: span(1 of 12);
     }
+    &--i {
+      font-family: 'WorkMedItalic';
+    }
   }
   &__apprentissageEnCours {
     text-align: center;

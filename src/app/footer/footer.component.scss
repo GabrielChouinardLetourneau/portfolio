@@ -9,19 +9,26 @@
 
   &__firstRow {
     font-size: 20px;
+    padding-top: 30px;
   }
 
   &__secondRow {
     margin: 50px auto;
     &Btn {
+      display: inline-block;
       box-shadow: 0 4px 4px rgba(0, 0, 0, 0.250);
       text-decoration: unset;
       color: #fff;
       background-color: #3F434D;
       border: 5px solid #6C87CC;
       border-radius: 15px;
+      transition: .4s all ease-in-out;
+      cursor: pointer;
       padding: 25px;
-      margin: auto 35px;
+      margin: 15px 30px;
+      &:hover {
+        transform: scale(1.1);
+      }
     }
   }
 
