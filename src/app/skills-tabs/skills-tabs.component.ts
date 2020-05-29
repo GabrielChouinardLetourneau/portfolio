@@ -15,6 +15,5 @@ export class SkillsTabsComponent implements OnInit {
     this.skillsContent = SkillsContent;
 
     this.titles = Object.keys(this.skillsContent);
-    console.log(this.skillsContent);
   }
 }
