@@ -139,9 +139,7 @@ app.get("/topGamesOnTwitch", (req, res) => {
   fetch('https://api.twitch.tv/helix/games/top', options)
     .then(response => response.json())
     .then(data => {
-
       return res.status(200).json(data);
-      // magic happens with the parsed response JSON 
     });
 
 })
@@ -151,33 +149,26 @@ app.get("/searchChannel/:query", (req, res) => {
   fetch('https://api.twitch.tv/helix/search/channels?query=' + querySearched, options)
     .then(response => response.json())
     .then(data => {
-
       return res.status(200).json(data);
-      // magic happens with the parsed response JSON 
     });
 
 })
 
 app.get("/game-clips/:name", async (req, res, next) => {
   const nameSearched = req.params.name;
-  const game_id = null;
 
   try {
     const game = await fetch('https://api.twitch.tv/helix/games?name=' + nameSearched, options)
       .then(response => response.json())
       .then(data => {
-        console.log(data);
         return data.data[0];
-        // magic happens with the parsed response JSON 
       });
 
     console.log(game);
     fetch('https://api.twitch.tv/helix/clips?game_id=' + game.id + '&first=10', options)
       .then(response => response.json())
       .then(data => {
-        console.log(data);
         return res.status(200).json(data);
-        // magic happens with the parsed response JSON 
       });
   }
   catch (err) {
