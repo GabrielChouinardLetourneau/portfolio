@@ -1,0 +1,75 @@
+<div class="sandboxContainer conteneur">
+
+  <div class="requestContainer">
+    <div class="btnsContainer">
+
+      <button (click)='fetchTopGames()' mat-raised-button color="primary">Current top games of Twitch</button>
+
+      <form class="form" [formGroup]="form">
+        <mat-form-field class="formFields">
+          <mat-label>
+            Search a channel
+          </mat-label>
+          <input matInput type="text" placeholder="Ex: shroud" formControlName="searchChannel"
+            (blur)="searchChannel($event)" />
+        </mat-form-field>
+        <mat-form-field class="formFields">
+          <mat-label>
+            Get game clips
+          </mat-label>
+          <input matInput type="text" placeholder="Ex: shroud" formControlName="gameClips"
+            (blur)="getGameClips($event)" />
+        </mat-form-field>
+      </form>
+    </div>
+
+    <div *ngIf="renderReady" class="contentResult">
+      <ng-container *ngIf="typeResult === 'TopGames'">
+        <div class="contentResult__games">
+          <ng-container *ngFor="let gameCard of results">
+            <div class="gameCard">
+              <a href='https://www.twitch.tv/directory/game/{{gameCard.name}}' target="_blank"
+                rel="noopener noreferrer">
+                <img [src]=gameCard.box_art_url [alt]=gameCard.name />
+              </a>
+            </div>
+          </ng-container>
+        </div>
+      </ng-container>
+      <ng-container *ngIf="typeResult === 'SearchChannel'">
+        <div class="contentResult__streamer">
+          <mat-card class="channelCard">
+            <a href='https://www.twitch.tv/{{results.display_name}}' target="_blank" rel="noopener noreferrer">
+              <div class="channelCard__label">
+                <mat-card-header>
+                  <mat-card-title>
+                    <h2>{{results.display_name}}</h2>
+                  </mat-card-title>
+                  <mat-card-subtitle>
+                    <h3>{{ results.is_live ? 'LIVE' : 'OFFLINE' }}</h3>
+                  </mat-card-subtitle>
+                </mat-card-header>
+                <img mat-card-image [src]=results.thumbnail_url [alt]=results.display_name>
+                <mat-card-content>
+                  <h4>{{results.title}}</h4>
+                </mat-card-content>
+
+              </div>
+            </a>
+          </mat-card>
+        </div>
+      </ng-container>
+      <ng-container *ngIf="typeResult === 'GameClips'">
+        <div class="contentResult__gamesClips">
+          <ng-container *ngFor="let gameClip of results">
+            <div class="">
+              <iframe [src]='gameClip.embed_url | safe' height="360" width="640" frameborder="0"
+                scrolling="no" allowfullscreen="true" target='_parent'>
+              </iframe>
+            </div>
+          </ng-container>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>

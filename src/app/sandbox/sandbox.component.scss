@@ -1,0 +1,78 @@
+.sandboxContainer {
+  min-height: calc(100vh - 200px);
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.requestContainer {
+  display: flex;
+  flex-direction: column;
+  @media screen and (min-width: 601px) {
+    // justify-content: space-between;
+    flex-direction: row;
+  }
+}
+
+.btnsContainer {
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contentResult {
+  margin-left: 70px;
+
+  &__games {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  &__streamer {
+    margin: 0 auto;
+    max-width: 300px;
+    img {
+      margin: unset;
+    }
+    h4 {
+      text-align: center;
+    }
+  }
+}
+
+.form {
+  margin-top: 30px;
+  &Fields {
+    margin: 15px 0;
+  }
+}
+
+.gameCard {
+  width: 138px;
+  position: relative;
+  &:hover {
+    .gameCard__label {
+      opacity: 1;
+      color: #fff;
+      background-color: rgba(0, 0, 0, 0.75);
+    }
+  }
+  &__label {
+    transition: 0.3s all ease-in-out;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    opacity: 0;
+  }
+}
+
+.channelCard {
+  a {
+    text-decoration: none;
+    color: unset;
+  }
+}

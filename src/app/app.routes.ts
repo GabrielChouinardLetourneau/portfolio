@@ -5,6 +5,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { NotFoundComponent } from 'src/app/not-found/not-found.component';
 import { HomeComponent } from 'src/app/home/home.component';
 import { RealisationIndexComponent } from './realisation-index/realisation-index.component';
+import { SandboxComponent } from './sandbox/sandbox.component';
+import { TwitchAuthGuard } from './guards/twitchAuth.guard';
 
 const routes: Routes = [
   {
@@ -15,6 +17,11 @@ const routes: Routes = [
   {
     path: 'realisation',
     component: RealisationIndexComponent
+  },
+  {
+    path: 'sandbox',
+    component: SandboxComponent,
+    canActivate: [TwitchAuthGuard]
   },
   {
     path: '**',
